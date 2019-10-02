@@ -1,0 +1,95 @@
+
+.blink {
+  -webkit-animation: blink 800ms step-end infinite;
+          animation: blink 800ms step-end infinite;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+
+
+.rotate {
+  -webkit-animation: rotate 16s linear infinite;
+  -moz-animation: rotate 16s linear infinite;
+  -ms-animation: rotate 16s linear infinite;
+  -o-animation: rotate 16s linear infinite;
+}
+
+@-webkit-keyframes rotate /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-rev {
+  -webkit-animation: rotateRev 40s linear infinite;
+  -moz-animation: rotateRev 40s linear infinite;
+  -ms-animation: rotateRev 40s linear infinite;
+  -o-animation: rotateRev 40s linear infinite;
+}
+
+@-webkit-keyframes rotateRev /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotateRev {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.scale-up-down {
+  -webkit-animation: scaleUpDown 1.5s ease-in-out infinite;
+  -moz-animation: scaleUpDown 1.5s linear infinite;
+  -ms-animation: scaleUpDown 1.5s linear infinite;
+  -o-animation: scaleUpDown 1.5s linear infinite;
+}
+.scale-up-down.delay-100 {
+  -webkit-animation-delay: 300ms; /* Chrome, Safari, Opera */
+  animation-delay: 300ms;
+}
+.scale-up-down.delay-200 {
+  -webkit-animation-delay: 800ms; /* Chrome, Safari, Opera */
+  animation-delay: 800ms;
+}
+
+@-webkit-keyframes scaleUpDown /* Safari and Chrome */ {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  75% {
+    -webkit-transform: scaleY(0.2);
+    transform: scaleY(0.2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+
